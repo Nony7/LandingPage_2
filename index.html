@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+            
+*{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+
+        
+
+        html,body{
+            width: 100vw;
+            height: 100vh;
+               
+       
+         
+        }
+
+        #wrapper{
+
+            width: 100vw;
+            min-height: 100vh;
+    
+        }
+
+        #section1{
+
+            width: 100vw;
+            min-height: 100vh;
+            overflow: hidden;
+       /*      background-color: burlywood; */
+       background-color: rgb(29, 29, 26);
+            
+          
+        
+
+     
+        }
+
+        #heading-1{
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+           
+            left: 50%;
+
+        }
+
+        h1{
+            
+            font-size: 9.5vw;
+            
+          
+            font-family: 'canopee';
+            font-weight: 700;
+            opacity: 1;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+           -webkit-text-stroke-width: 3px ;
+            -webkit-text-stroke-color:whitesmoke;
+            transform: scale(1.2);
+      /*       color:saddlebrown; */
+      color: whitesmoke;
+            opacity: 1;
+            
+        }
+
+        #overlay{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: black;
+            overflow: hidden !important;
+            opacity: 1;
+   
+
+
+        }
+        #overlayheading{
+           
+            margin-top: 10px;
+          
+
+        }
+        #overlayheading>h2{
+            text-align: center;
+            font-size: 6vw;
+            font-family: 'reval';
+            color: whitesmoke;
+            opacity: 1;
+        }
+
+        #image-wrapper{
+            width: 100vw;
+       
+            display: flex;
+   
+ 
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+         
+      
+        
+        }
+
+        .img{
+            width: 16%;
+            height: 35vh;
+            
+           background-position: 50% 50%;
+           background-repeat: no-repeat;
+           opacity: 1;
+
+        }
+
+        .img-1{
+            
+            background-image: url("grace.jpg");
+            background-size: cover;
+            transform: scale(1.2);
+        }
+        .img-2{
+            
+            background-image: url("etro.jpg");
+            background-size: cover;
+            transform: scale(1.7);
+        }
+        .img-3{
+            
+            background-image: url("lips.jpg");
+            background-size: cover;
+            transform: scale(1.2);
+        }
+        .img-4{
+            
+            background-image: url("Pinterest.jpg");
+            background-size: cover;
+            transform: scale(1.4);
+        }
+        .img-5{
+      
+            background-image: url("Яндекс Картинки_ поиск изображений в интернете, поиск по изображению.jpg");
+            background-size: cover;
+            transform: scale(1.6);
+        }
+        .img-6{
+            
+            background-image: url("Bella.jpg");
+            background-size: cover;
+            transform: scale(1.5);
+        }
+        .img-7{
+            
+            background-image: url("one5.jpg");
+            background-size: cover;
+            transform: scale(1.2);
+        }
+
+       
+
+      
+
+
+
+
+
+
+
+
+
+        #overlay-navbar{
+            position: absolute;
+            bottom: 5%;
+         
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        #overlay-navbar a{
+            text-decoration: none;
+            font-size: 2vw;
+            color: whitesmoke;
+            transform: scale(1.1);
+           font-family: 'Grifinito L';
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+
+        <div id="section1">
+
+            <div id="heading-1">
+                <h1 class="head1">LANDING PAGE ANIMATION</h1>
+            </div>
+          
+
+                        <div id="overlay">
+
+                            <div id="overlayheading">
+                                <h2>Victoria's Secret</h2>
+                            </div>
+
+                            <div id="image-wrapper">
+
+                                <div class="img img-1" ></div>
+                                <div class="img img-2" ></div>
+                                <div class="img img-3" ></div>
+                                <div class="img img-4" ></div>
+                                <div class="img img-5" ></div>
+                                <div class="img img-6" ></div>
+                                
+
+                            </div>
+
+                            <div id="overlay-navbar">
+
+                                <div><a href="">Dribble</a></div>
+                                <div><a href="">Behance</a></div>
+                                <div><a href="">Awards</a></div>
+
+                            </div>
+
+
+                        </div><!--overlay-->
+
+
+
+        </div><!--section1-->
+
+
+
+
+    </div><!--wrapper-->
+
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+
+  
+
+
+<script>
+
+
+                      
+
+
+                   var tline2=gsap.timeline();
+
+                    tline2.from(".img",{
+
+                        x:"-200%",
+                    
+                        ease:"easeInOut",
+                        duration:3.3,
+                        
+                        opacity:0,
+                     
+
+                    });
+
+                    tline2.from("h2",{
+
+                    x:-20,
+                    
+                    ease:"easeInOut",
+                    duration:0.6,
+                    delay:-0.5,
+                    
+                    
+                    opacity:0,
+
+                    } )
+
+
+                    tline2.from("#overlay-navbar a",{
+
+                        
+                    
+                        ease:"easeInOut",
+                        duration:1.2,
+                        delay:-0.7,
+                        
+                        opacity:0,
+                     
+
+                    });
+
+                    tline2.to(".img",{
+
+                        scale:0,
+                        opacity:0,
+                
+
+                        ease:"easeInOut",
+                        duration:1.2,
+                        delay:1,
+                        
+
+
+                        });
+
+
+                        tline2.to("h2",{
+
+                                                
+                                           
+                        ease:"Power3.easeOut",
+                        duration:0.2,
+                        delay:-0.3,
+
+                        opacity:0,
+
+
+                        });
+
+
+
+                        tline2.to("#overlay-navbar a",{
+
+                        
+                            scale:0,                       
+                            ease:"easeInOut",
+                            duration:1,
+                            delay:-0.7,
+
+                            opacity:0,
+
+
+                            });
+
+                        tline2.to("#overlay",{
+
+                        
+                            y:"-100%",
+                            skewX:"-30", 
+                            ease:"easeInOut",
+                            duration:0.6,
+                            /* delay:-0.5, */
+                            
+                            opacity:1,
+
+
+                            });
+
+                            tline2.from("h1",{
+
+                                             
+                            ease:"easeInOut",
+                            duration:0.8,
+                           
+                            delay:0.2,
+
+                            opacity:0,
+                            })
+
+
+                        
+
+
+   
+    
+</script>
+</body>
+</html>
